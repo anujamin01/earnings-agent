@@ -48,7 +48,7 @@ Transcript:
 class EarningsExtractionAgent:
     def __init__(self, api_key: str):
         self.client = anthropic.Anthropic(api_key=api_key)
-        self.model = "claude-sonnet-4-20250514"
+        self.model = "claude-sonnet-4-5"
 
     def extract(self, transcript: str, ticker: str) -> EarningsSignals:
         prompt = EXTRACTION_PROMPT.format(transcript=transcript[:12000])
